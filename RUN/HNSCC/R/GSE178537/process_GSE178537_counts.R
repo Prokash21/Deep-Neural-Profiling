@@ -21,7 +21,7 @@ count_file_url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178537/s
 download.file(url = count_file_url, destfile = "GSE178537_expected_counts.txt.gz")
 
 # ---- 4. Unzip the file ----
-gunzip("GSE178537_expected_counts.txt.gz", overwrite = TRUE)
+# gunzip("GSE178537_expected_counts.txt.gz", overwrite = TRUE)
 
 # ---- 5. Load the count data ----
 count_data <- fread("GSE178537_expected_counts.txt")
@@ -62,3 +62,5 @@ write.csv(output_df, file = "count_data_with_ids.csv", row.names = FALSE)
 message("✅ Processing complete. Files saved as:
 - count_data_GSE178537.csv
 - count_data_with_ids.csv")
+
+
