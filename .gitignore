@@ -1,0 +1,26 @@
+# Ignore any other raw/processed datasets
+data/
+*.csv
+*.tsv
+*.h5
+*.zip
+*.gz
+*.tar
+*.log
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.soRUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.csv
+RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.tsv
