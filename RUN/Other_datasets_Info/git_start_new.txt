@@ -1,0 +1,34 @@
+# Step into your project folder
+cd "/e/DWCT/Papia Mam/Cancer/GitHub/Cancer_Project_BMU"
+
+# 1. Delete old Git history if it exists
+rm -rf .git
+
+# 2. Initialize new Git repo
+git init
+
+# 3. Create .gitignore file
+cat <<EOL > .gitignore
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.csv
+*.tsv
+RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.csv
+RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.tsv
+EOL
+
+# 4. Add everything (except ignored files)
+git add .
+
+# 5. Commit with a clear message
+git commit -m "Clean repo: removed large files and pushed fresh version"
+
+# 6. Add GitHub remote (replace URL if needed)
+git remote add origin https://github.com/Prokash21/Cancer_Project_BMU.git
+
+# 7. Rename branch to main
+git branch -M main
+
+# 8. Push to GitHub with force (overwrite previous history)
+git push -u origin main --force
