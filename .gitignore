@@ -8,6 +8,7 @@ data/
 *.tar
 *.log
 *.pdf
+*.txt
 
 # OS files
 .DS_Store
@@ -25,3 +26,8 @@ __pycache__/
 *.soRUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.csv
 RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.tsv
 .Rproj.user
+
+# For R codes
+echo ".Rhistory" >> .gitignore
+echo ".RData" >> .gitignore
+echo ".Rproj.user/" >> .gitignore
