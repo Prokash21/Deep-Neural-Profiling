@@ -28,6 +28,6 @@ RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.tsv
 .Rproj.user
 
 # For R codes
-echo ".Rhistory" >> .gitignore
-echo ".RData" >> .gitignore
-echo ".Rproj.user/" >> .gitignore
+.Rhistory
+.RData
+.Rproj.user/
