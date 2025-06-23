@@ -10,14 +10,19 @@ import sys
 #Read user input
 cancer_type = sys.argv[1]
 
-input_folder = '../ALL_CANCER_FILES/' + cancer_type + '/'
-output_folder = '../ALL_CANCER_FILES/' + cancer_type + '/' 
+input_folder = './ALL_CANCER_FILES/' + cancer_type + '/'
+output_folder = './ALL_CANCER_FILES/' + cancer_type + '/' 
 
 #Read all training embeddings
-dims  = [5, 10, 25, 50, 75, 100]
+# dims  = [5, 10, 25, 50, 75, 100]
+
+# for project
+dims = [50]
+
 data_list = []
 for dim in dims:
-    run = 100
+    # run = 100
+    run = 2
     for i in range(run):
         data_df = pd.read_table(input_folder + 'VAE_FILES/' + cancer_type + '_DATA_TOP2_JOINED_encoded_' + str(dim) + 'L_TRAINING_fold' + str(i) + '.tsv', index_col = 0)      
         print(data_df.shape)
@@ -27,7 +32,8 @@ joined_data = np.concatenate(data_list, axis=1)
 print("Joined training embeddings" , joined_data.shape)
 
 #Read the ensemble labels
-L = 150
+# L = 150
+L = 50
 labels_df = pd.read_table(input_folder + cancer_type + '_TRAINING_DATA_kmeans_ENSEMBLE_LABELS_' + str(L) + 'L.txt', header= None)
 labels = labels_df.values
 print("Ensemble labels ", len(labels))
