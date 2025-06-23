@@ -9,6 +9,7 @@ data/
 *.log
 *.pdf
 *.txt
+*.png
 
 # OS files
 .DS_Store
