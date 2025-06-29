@@ -1,0 +1,34 @@
+---
+title: "Probabilistic Embedding Model for Latent Feature Learning"
+output: word_document
+---
+
+A probabilistic latent variable model was built on PCA-reduced data to learn a compact, non-linear representation of high-dimensional gene expression profiles. This model is a type of neural network containing an encoder and decoder with an entropy-limited latent layer of \( D \) variables (where \( D \ll M \), and \( M = 500 \), the number of PCA features). This architecture generates an embedding \( Z \) that preserves information from the high-dimensional input within a lower-dimensional space.
+
+The encoder network, defined as \( f_{\phi} : X \rightarrow Z \), maps from the input space \( X \in \mathbb{R}^M \) to the latent embedding \( Z \in \mathbb{R}^D \). The decoder, \( g_{\varphi} : Z \rightarrow X \), reconstructs the input from the latent space. The primary objective is to minimize the expected squared Euclidean (L2) distance between the input and its reconstruction:
+
+\[
+\min_{\phi, \varphi} \; \mathbb{E} \left[ \left\| x - g_{\varphi}(f_{\phi}(x)) \right\|_2^2 \right]
+\]
+
+Here, \( \phi \) and \( \varphi \) are the learnable parameters of the encoder and decoder, respectively, and \( \hat{x} = g_{\varphi}(f_{\phi}(x)) \) represents the reconstructed input. The L2 loss, denoted \( \| x - \hat{x} \|_2^2 \), captures the total reconstruction error across all input dimensions. Explicitly, this corresponds to:
+
+\[
+(x_1 - \hat{x}_1)^2 + (x_2 - \hat{x}_2)^2 + \cdots + (x_n - \hat{x}_n)^2
+\]
+
+Unlike conventional encoders, the probabilistic embedding model (PEM) represents each sample as a probability distribution in latent space. This formulation captures biological variability and uncertainty in gene expression.
+
+The input matrix \( X \in \mathbb{R}^{N \times M} \) (based on 500 PCs) is passed to the encoder \( f_{\phi} \), which outputs a mean vector \( \mu_x \in \mathbb{R}^D \) and a variance vector \( \sigma_x \in \mathbb{R}^D \):
+
+\[
+f_{\phi} : x \rightarrow (\mu_x, \sigma_x), \quad Z \sim \mathcal{N}(\mu_x, \sigma_x)
+\]
+
+The decoder \( g_{\varphi} \) reconstructs the input from a sampled latent vector \( Z \). The full objective function includes a regularization term:
+
+\[
+\min_{\phi, \varphi} \; \mathbb{E} \left[ \left\| x - g_{\varphi}(f_{\phi}(x)) \right\|_2^2 \right] + \text{KL} \left[ \mathcal{N}(\mu_x, \sigma_x) \| \mathcal{N}(0, 1) \right]
+\]
+
+The reconstruction term ensures fidelity to the input, while the KL divergence regularizes the latent distribution toward a standard normal prior. After training, the learned latent variables \( Z \) were used for downstream analysis, including gene importance scoring using Integrated Gradients and pathway enrichment analysis.

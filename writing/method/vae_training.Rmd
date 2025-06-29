@@ -1,0 +1,67 @@
+---
+title: "Training Variational Autoencoder Models"
+author: "JPD"
+date: "2025-06-29"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+## Training variational autoencoder models
+
+An ‘autoencoder’ is a type of neural network that consists of an encoder and a decoder network with an information bottleneck layer with \( D \) latent variables (that is, \( D \ll M \), where \( M \) denotes the number of features) in the middle. 
+
+It generates an embedding \( \mathbf{Z} \) such that the information present in the original space is preserved in this lower-dimensional space. Specifically, the encoder network, defined as:
+
+\[
+f_{\theta} : \mathbf{X} \rightarrow \mathbf{Z}, \quad \mathbf{X} \in \mathbb{R}^{M}, \quad \mathbf{Z} \in \mathbb{R}^{D}
+\]
+
+maps input \( \mathbf{X} \) to latent embedding \( \mathbf{Z} \). Similarly, the decoder network:
+
+\[
+g_{\phi} : \mathbf{Z} \rightarrow \mathbf{X}
+\]
+
+maps the embedding back to the input space. We optimize both networks by minimizing the squared \( \ell_2 \)-norm between the input \( \mathbf{x} \) and the reconstructed output as follows:
+
+\[
+\min_{\phi, \theta} \mathbb{E} \left[ \left\| x - g_{\phi}(f_{\theta}(x)) \right\|^2_2 \right]
+\]
+
+
+
+
+To train the autoencoder, we jointly optimized the encoder and decoder networks by minimizing the reconstruction error between the original input and its reconstruction. Formally, given an input sample \( x \), the encoder \( f_{\theta}(x) \) maps \( x \) into a lower-dimensional latent representation, and the decoder \( g_{\phi}(f_{\theta}(x)) \) attempts to reconstruct the original input from this latent embedding. The training objective is to minimize the expected squared Euclidean (L2) norm between the input and its reconstruction:
+
+\[
+\min_{\phi, \theta} \; \mathbb{E} \left\| x - g_{\phi}(f_{\theta}(x)) \right\|_2^2
+\]
+
+where \( \theta \) and \( \phi \) are the learnable parameters of the encoder and decoder, respectively. Here, \( \hat{x} = g_{\phi}(f_{\theta}(x)) \) represents the reconstructed input. The L2 loss term \( \| x - \hat{x} \|_2^2 \) captures the total reconstruction error across all dimensions of the input. Explicitly, this corresponds to:
+
+\[
+(x_1 - \hat{x}_1)^2 + (x_2 - \hat{x}_2)^2 + \cdots + (x_n - \hat{x}_n)^2
+\]
+
+where \( x_i \) and \( \hat{x}_i \) denote the \( i^{\text{th}} \) components of the original and reconstructed input vectors, respectively. This loss encourages the model to faithfully capture the essential structure of the data in the latent space, enabling effective data compression and reconstruction.
+
+
+
+Samples with 500 principal components (PCs) were used to construct the input matrix \( X \in \mathbb{R}^{N \times M} \), where \( N \) is the number of samples and \( M \) is the number of features. This matrix was passed to an encoder \( f_{\theta} \), which outputs a mean vector \( \mu_x \in \mathbb{R}^D \) and a variance vector \( \sigma_x \in \mathbb{R}^D \):
+
+\[
+f_{\theta} : x \rightarrow (\mu_x, \sigma_x), \quad Z \sim \mathcal{N}(\mu_x, \sigma_x)
+\]
+
+A decoder \( g_{\phi} \) reconstructs the input from the sampled latent vector \( Z \). The model is trained to minimize the following loss:
+
+\[
+\min_{\theta, \phi} \; \mathbb{E} \left[ \| x - g_{\phi}(Z) \|_2^2 \right] + \text{KL} \left[ \mathcal{N}(\mu_x, \sigma_x) \| \mathcal{N}(0, 1) \right]
+\]
+
+The first term ensures accurate reconstruction, while the KL divergence regularizes the latent space by encouraging it to resemble a standard Gaussian distribution. After training, the learned latent variables \( Z \) were used for gene importance analysis using Integrated Gradients, followed by pathway enrichment.
