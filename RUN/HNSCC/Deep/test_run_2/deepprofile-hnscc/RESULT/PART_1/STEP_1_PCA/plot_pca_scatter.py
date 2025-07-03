@@ -1,21 +1,38 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+import os
 
-# Use absolute path to PCA-transformed data (samples × PCs)
-pca_file = r"E:\DWCT\Papia Mam\Cancer\GitHub\Cancer_Project_BMU\RUN\HNSCC\Deep\test_run_2\deepprofile-hnscc\ALL_CANCER_FILES\HEAD_NECK\HEAD_NECK_DATA_TOP2_JOINED_PCA_500L.tsv"
+# === PDF + FONT SETTINGS ===
+rcParams['pdf.fonttype'] = 42       # Illustrator-compatible text
+rcParams['font.family'] = 'Arial'   # Use clean, editable Arial font
 
-# Load PCA data
+# === Define file paths ===
+pca_file = "HEAD_NECK_DATA_TOP2_JOINED_PCA_500L.tsv"
+save_file = "pca_sample_scatter_plot.pdf"
+
+# === Load PCA-transformed data (samples × PCs) ===
 pca_data_df = pd.read_csv(pca_file, sep="\t", index_col=0)
+print(f"Loaded PCA data with shape: {pca_data_df.shape}")
 
-# Scatter plot of PC1 vs PC2
-plt.figure(figsize=(8, 6))
-plt.scatter(pca_data_df.iloc[:, 0], pca_data_df.iloc[:, 1], alpha=0.6)
-plt.title('PCA of Samples (PC1 vs PC2)')
+# === Plot PC1 vs PC2 ===
+plt.figure(figsize=(8, 5))
+plt.scatter(
+    pca_data_df.iloc[:, 0],  # PC1
+    pca_data_df.iloc[:, 1],  # PC2
+    alpha=0.6,
+    s=18,
+    edgecolor='gray',
+    linewidth=0.3
+)
+plt.title('PCA of Samples (PC1 vs PC2)', pad=10)
 plt.xlabel('PC1')
 plt.ylabel('PC2')
 plt.grid(True)
 plt.tight_layout()
 
-# Save plot as PDF
-save_path = r"E:\DWCT\Papia Mam\Cancer\GitHub\Cancer_Project_BMU\RUN\HNSCC\Deep\test_run_2\deepprofile-hnscc\RESULT\PART_1\STEP_1_PCA\pca_sample_scatter_plot.pdf"
-plt.savefig(save_path)
+# === Save as editable vector PDF ===
+plt.savefig(save_file, format='pdf')
+plt.close()
+
+print(f"✅ Saved: {os.path.abspath(save_file)}")
