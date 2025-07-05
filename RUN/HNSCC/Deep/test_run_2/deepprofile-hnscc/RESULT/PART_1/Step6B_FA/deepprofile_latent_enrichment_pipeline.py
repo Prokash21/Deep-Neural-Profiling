@@ -5,6 +5,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+from matplotlib import rcParams
+import os
+
+# === PDF + FONT SETTINGS ===
+rcParams['pdf.fonttype'] = 42       # Illustrator-compatible text
+rcParams['font.family'] = 'Arial'   # Use clean, editable Arial font
+
+
 attr_file = "HEAD_NECK_DeepProfile_Ensemble_Gene_Importance_Weights_50L.tsv"
 top_n = 20
 organism = "hsapiens"
