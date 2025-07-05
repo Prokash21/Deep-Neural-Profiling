@@ -10,6 +10,12 @@ data/
 *.pdf
 *.txt
 *.png
+*.svg
+*.rnk
+*.log
+*.gmt
+
+
 
 # OS files
 .DS_Store
