@@ -14,6 +14,14 @@ data/
 *.rnk
 *.log
 *.gmt
+*.ai
+*.tif
+*.json
+*.svg
+*.rnk
+*.log
+*.gmt
+*.xlsx
 
 
 
