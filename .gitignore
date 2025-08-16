@@ -23,7 +23,8 @@ data/
 *.gmt
 *.xlsx
 
-
+# EXCEPTION: Track this PNG file
+!figure/Readme_figure/poster-1final_jpd_th_print.png
 
 # OS files
 .DS_Store

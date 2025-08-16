@@ -552,7 +552,7 @@ volcano_plot <- ggplot(resLFC, aes(x = log2FoldChange, y = -log10(padj))) +
 # Save the plot immediately after creating it
 file_name <- paste0("Volcano_Plot_", X, ".pdf")
 ggsave(filename = file_name, plot = volcano_plot, width = 8, height = 6)
-
+print(volcano_plot)
 # Print confirmation message
 print(paste("Plot saved as:", file_name))
 
