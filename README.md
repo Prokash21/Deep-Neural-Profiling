@@ -5,6 +5,11 @@ The project applies **deep learning (Variational Autoencoders, Integrated Gradie
 
 ---
 
+## Poster
+![DeepProfile Poster](figure/Readme_figure/poster-1final_jpd_th_print.png)
+
+---
+
 ## Abstract
 **Background:** Conventional differential gene expression (DGE) analysis inadequately captures the complex molecular changes that drive the progression of oropharyngeal carcinoma (OC). **Variational Autoencoders (VAEs)** offer a deep learning approach to uncover hidden patterns in high-dimensional transcriptomic data.  
 
@@ -15,11 +20,6 @@ The project applies **deep learning (Variational Autoencoders, Integrated Gradie
 **Conclusion:** Our deep learning framework identified **RAP1GAP2** as a hidden driver in oropharyngeal carcinoma. This demonstrates how VAEs combined with Integrated Gradients can reveal molecular regulators overlooked by alternative approaches. The method provides new insights into OC biology that could guide future research and therapeutic strategies.  
 
 **Keywords:** Oropharyngeal carcinoma; transcriptomics; deep learning; latent features; RAP1GAP2; Rap1 signaling; MAPK pathway; Golgi secretion  
-
----
-
-## Poster
-![DeepProfile Poster](figure/Readme_figure/poster-1final_jpd_th_print.png)
 
 ---
 
