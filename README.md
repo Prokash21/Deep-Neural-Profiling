@@ -23,6 +23,32 @@ The project applies **deep learning (Variational Autoencoders, Integrated Gradie
 
 ---
 
+## Significance and Ongoing Work
+
+Interestingly, our computational analysis highlighted **RAP1GAP2** as a latent regulator in oropharyngeal carcinoma. This is particularly exciting given that its close analog, **Rap1GAP**, has been experimentally shown to inhibit tumor growth in **Oropharyngeal Squamous Cell Carcinoma**:
+
+> Zhang, Zhaocheng et al.  
+> *Rap1GAP Inhibits Tumor Growth in Oropharyngeal Squamous Cell Carcinoma.*  
+> *The American Journal of Pathology*, Volume 168, Issue 2, 585–596.  
+
+This convergence of evidence suggests that **RAP1GAP2 may function as a novel analog of Rap1GAP**, influencing tumor invasion and progression through Rap1/MAPK signaling and Golgi-mediated secretion pathways.
+
+---
+
+## Validation Experiments
+
+To validate these computational findings, we are now conducting **qRT-PCR assays** on **cancer-positive head and neck samples**.  
+
+- **Collaboration:** A joint project between **BMU (Bangladesh Medical University)** and **SUST (Shahjalal University of Science and Technology)**  
+- **Ethical Clearance:** Approved by both BMU and SUST institutional review boards  
+- **Sample Collection:** In progress through the **Department of Otolaryngology – Head & Neck Surgery, BMU**  
+- **Planned Experiments:**  
+  - qRT-PCR quantification of **RAP1GAP2** expression  
+  - Correlation with clinicopathological features  
+  - Comparison against known Rap1GAP activity in OC  
+
+---
+
 ## Acknowledgements
 - Inspired by **DeepProfile** (Nature Biomedical Engineering, 2024)  
 - Supervision and guidance provided during my undergraduate thesis  
