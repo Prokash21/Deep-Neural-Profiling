@@ -28,7 +28,11 @@ data/
 # EXCEPTION: Track this PNG file
 !figure/Readme_figure/poster-1final_jpd_th_print.png
 !writing/v_6_g/JPD_4th_project_report_7_7_25_mirror_v3_g.pdf
-
+# 2nd readme
+!design/Project_Design_Cancer_PG_19_Apr_25.png
+!design/Bangladesh_Medical_University_Logo.png
+!design/Shahjalal_University_of_Science_and_Technology_logo.png
+!design/NICRH_logo.png
 
 # OS files
 .DS_Store
