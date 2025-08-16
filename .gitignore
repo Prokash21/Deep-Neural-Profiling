@@ -22,9 +22,12 @@ data/
 *.log
 *.gmt
 *.xlsx
+*.docx
+*.jpg
 
 # EXCEPTION: Track this PNG file
 !figure/Readme_figure/poster-1final_jpd_th_print.png
+!writing\v_5_m\JPD_4th_project_report_7_7_25_mirror_v3.pdf
 
 # OS files
 .DS_Store
