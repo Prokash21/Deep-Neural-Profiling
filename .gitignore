@@ -25,6 +25,10 @@ data/
 *.docx
 *.jpg
 
+# But keep these two
+!deep_neural_profiling_undergrad_thesis.pdf
+!poster.png
+
 # EXCEPTION: Track this PNG file
 !figure/Readme_figure/poster-1final_jpd_th_print.png
 !writing/v_6_g/JPD_4th_project_report_7_7_25_mirror_v3_g.pdf
