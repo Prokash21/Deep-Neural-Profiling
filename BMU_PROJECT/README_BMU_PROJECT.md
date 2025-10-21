@@ -17,6 +17,7 @@
 ![Project Design](design/Project_Design_Cancer_PG_19_Apr_25.png)
 
 ---
+
 ## Abstract
 
 **Background:**  
@@ -35,28 +36,53 @@ By combining computational discovery with wet-lab validation, this study aims to
 
 ## Project Proposal
 
-**01. Title of the Study**  
-*Machine Learning-Driven Identification and Quantitative Validation of Cancer-Specific Biomarkers across Multiple Carcinomas of Different Anatomic Sites.*
+### 01. Title of the Study  
+**Machine Learning-Driven Identification and Quantitative Validation of Cancer-Specific Biomarkers across Multiple Carcinomas of Different Anatomic Sites**
 
-**02. Principal Investigator (PI):**  
-Dr. S. M. Rashed Ul Islam  
+---
+
+### 02. Research Team
+
+#### Principal Investigator (PI)
+**Dr. S. M. Rashed Ul Islam**  
 Associate Professor  
-Department of Virology, BMU  
+Department of Virology  
+*Bangladesh Medical University (BMU)*
 
-**03. Co-PI Investigator:**  
-Tanvir Hossain  
-Department of Biochemistry and Molecular Biology, SUST  
+#### Co-Principal Investigator
+**Tanvir Hossain**  
+Department of Biochemistry and Molecular Biology  
+*Shahjalal University of Science and Technology (SUST)*
 
-**04. Co-Investigators:**  
-- Dr. Jannatul Ferdous — Professor, Dept. of Gynecological Oncology, BMU  
-- Dr. Syed Farhan Ali Razib — Associate Professor, Dept. of Otolaryngology–Head & Neck Surgery, BMU  
-- Dr. Hasan Shahrear Ahmed — Associate Professor, Dept. of Surgical Oncology, BMU  
-- Dr. Ashrafur Rahman — Assistant Professor, Dept. of Surgical Oncology, National Institute of Cancer Research & Hospital  
-- Dr. Bishnu Pada Dey — Associate Professor, Dept. of Pathology, BMU  
-- Papia Rahman — Lecturer, Dept. of Biochemistry and Molecular Biology, SUST  
+#### Co-Investigators
 
-**05. Place of Study:**  
-Department of Virology, BMU and Department of Biochemistry and Molecular Biology, SUST  
+| Name | Position | Department | Institution |
+|------|----------|------------|-------------|
+| **Dr. Jannatul Ferdous** | Professor | Gynecological Oncology | BMU |
+| **Dr. Syed Farhan Ali Razib** | Associate Professor | Otolaryngology–Head & Neck Surgery | BMU |
+| **Dr. Hasan Shahrear Ahmed** | Associate Professor | Surgical Oncology | BMU |
+| **Dr. Ashrafur Rahman** | Assistant Professor | Surgical Oncology | National Institute of Cancer Research & Hospital (NICRH) |
+| **Dr. Bishnu Pada Dey** | Associate Professor | Pathology | BMU |
+| **Papia Rahman** | Lecturer | Biochemistry and Molecular Biology | SUST |
+
+---
+
+### 03. Research Sites
+
+#### Primary Research Locations
+
+**Bangladesh Medical University (BMU)**
+- Department of Virology (Lead Department)
+- Department of Gynecological Oncology
+- Department of Otolaryngology–Head & Neck Surgery
+- Department of Surgical Oncology
+- Department of Pathology
+
+**Shahjalal University of Science and Technology (SUST)**
+- Department of Biochemistry and Molecular Biology (Lead Department)
+
+**National Institute of Cancer Research & Hospital (NICRH)**
+- Department of Surgical Oncology
 
 ---
 
@@ -73,4 +99,3 @@ Department of Virology, BMU and Department of Biochemistry and Molecular Biology
 
 This project is released under the **MIT License** for academic and non-commercial use.  
 Please cite this work if you use any part of the code, design, or methodology.
-
