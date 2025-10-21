@@ -5,16 +5,16 @@
 ## Collaborating Institutions
 
 <div align="center">
-  <img src="BMU_PROJECT/design/Shahjalal_University_of_Science_and_Technology_logo.png" alt="SUST Logo" width="200"/>
-  <img src="BMU_PROJECT/design/Bangladesh_Medical_University_Logo.png" alt="BMU Logo" width="200"/>
-  <img src="BMU_PROJECT/design/NICRH_logo.png" alt="NICRH Logo" width="200"/>
+  <img src="design/Shahjalal_University_of_Science_and_Technology_logo.png" alt="SUST Logo" width="200"/>
+  <img src="design/Bangladesh_Medical_University_Logo.png" alt="BMU Logo" width="200"/>
+  <img src="design/NICRH_logo.png" alt="NICRH Logo" width="200"/>
 </div>
 
 ---
 
 ## Project Design
 
-![Project Design](BMU_PROJECT/design/Project_Design_Cancer_PG_19_Apr_25.png)
+![Project Design](design/Project_Design_Cancer_PG_19_Apr_25.png)
 
 ---
 ## Abstract
