@@ -26,18 +26,8 @@ data/
 *.jpg
 
 # But keep these two
-!deep_neural_profiling_undergrad_thesis.pdf
-!poster.png
-!BMU_PROJECT\IRB_MOU\IRB_Application_FORM_17_08_2025.png
-
-# EXCEPTION: Track this PNG file
-!figure/Readme_figure/poster-1final_jpd_th_print.png
-!writing/v_6_g/JPD_4th_project_report_7_7_25_mirror_v3_g.pdf
-# 2nd readme
-!BMU_PROJECT/design/Project_Design_Cancer_PG_19_Apr_25.png
-!BMU_PROJECT/design/Bangladesh_Medical_University_Logo.png
-!BMU_PROJECT/design/Shahjalal_University_of_Science_and_Technology_logo.png
-!BMU_PROJECT/design/NICRH_logo.png
+!validation/IRB_MOU/IRB_Application_FORM_17_08_2025.png
+!validation/design/*.png
 
 # OS files
 .DS_Store
@@ -52,11 +42,24 @@ Thumbs.db
 # Python cache and compiled files
 __pycache__/
 *.py[cod]
-*.soRUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.csv
-RUN/HNSCC/Deep/HEAD_NECK_DATA_TOP2_JOINED_BATCH_CORRECTED_CLEANED.tsv
-.Rproj.user
+*.so
 
 # For R codes
 .Rhistory
 .RData
 .Rproj.user/
+
+# Office lock files and Anaconda project DBs
+~$*
+anaconda_projects/
+
+# Methylation analysis: GDC downloads and results
+GDCdata/
+methylation/results/
+*.rds
+
+# Thesis-era files kept locally only (superseded by zenodo_manuscript/)
+manuscript/deep_neural_profiling_undergrad_thesis.pdf
+figures/poster.png
+deepprofile/illustrator_figures/poster/
+deepprofile/illustrator_figures/Step_2_VAE/
