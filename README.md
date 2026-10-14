@@ -1,4 +1,4 @@
-# Deep Neural Profiling Reveals RAP1GAP2 as a Latent Regulator in Head and Neck Cancer
+# Deep Neural Profiling Identifies RAP1GAP2 as a Latent Regulator in Head and Neck Squamous Cell Carcinoma: Integrative Transcriptomic and Multi-omic Analysis
 
 Code, analyses and manuscript for a project that began as my **4th-year undergraduate project (June–July 2025)** in the
 Department of Biochemistry and Molecular Biology, Shahjalal University of Science and Technology, and was extended with
@@ -7,14 +7,16 @@ a TCGA-HNSC multi-omic follow-up. The deep learning workflow follows the **DeepP
 
 **Authors:** Joy Prokash Debnath, Tanvir Hossain, Papia Rahman
 
-**Preprint:** the manuscript is in [`zenodo_manuscript/`](zenodo_manuscript/) (Zenodo DOI to be added after upload).
+**Preprint:** [`zenodo_manuscript/manuscript.pdf`](zenodo_manuscript/manuscript.pdf) (Zenodo DOI to be added after upload).
+
+**Thesis:** [`manuscript/deep_neural_profiling_undergrad_thesis_project.pdf`](manuscript/deep_neural_profiling_undergrad_thesis_project.pdf)
 
 ---
 
 ## Abstract
 
 **Background:** Conventional differential gene expression (DGE) analysis inadequately captures the complex molecular
-changes that drive the progression of head and neck cancer, including oropharyngeal carcinoma. Variational
+changes that drive the progression of head and neck squamous cell carcinoma (HNSCC). Variational
 autoencoders (VAEs) combined with Integrated Gradients, as in the DeepProfile framework, yield interpretable latent
 spaces from large cancer expression compendia.
 
@@ -35,15 +37,15 @@ promoter was hypomethylated in tumours (mean Δβ −0.20), but methylation was 
 overall survival. Genome-wide, 163 hypermethylated-downregulated and 42 hypomethylated-upregulated genes showed a
 significant negative methylation–expression correlation.
 
-**Conclusion:** The deep learning framework identified RAP1GAP2 as a latent, classification-informative gene in head and
-neck cancer that is overlooked by DGE analysis. Biological interpretation suggests a possible role through Rap1, MAPK
+**Conclusion:** The deep learning framework identified RAP1GAP2 as a latent, classification-informative gene in HNSCC
+that is overlooked by DGE analysis. Biological interpretation suggests a possible role through Rap1, MAPK
 signalling and Golgi-mediated secretion that now requires experimental validation.
 
 ---
 
 ## Validation experiments
 
-To validate the computational findings, **qRT-PCR assays** on **head and neck cancer samples** are under way.
+To validate the computational findings, **qRT-PCR assays** on **HNSCC samples** are under way.
 
 - **Collaboration:** a joint project between **BMU (Bangladesh Medical University)** and **SUST (Shahjalal University of Science and Technology)**
 - **Ethical clearance:** approved by the BMU and SUST institutional review boards
@@ -55,14 +57,14 @@ To validate the computational findings, **qRT-PCR assays** on **head and neck ca
 ## Repository structure
 
 ```
-zenodo_manuscript/  Preprint (text source, build script, figures and supplementary tables)
+zenodo_manuscript/  Preprint PDF
 deepprofile/        VAE training and Integrated Gradients (adapted from DeepProfile), result plots,
                     single-gene classifiers and survival analysis (see deepprofile/README.md)
 preprocessing/      Dataset download and QC (GSE178537, GSE290057, TCGA-HNSC)
 methylation/        TCGA-HNSC promoter methylation × DEG integration (see methylation/README.md)
 rap1gap2_analysis/  RAP1GAP2/RAP1GAP multi-omic follow-up: expression (2 cohorts), methylation,
                     CNA, mutations, survival, downstream markers (see rap1gap2_analysis/README.md)
-manuscript/         Thesis-era R Markdown and table sources
+manuscript/         Thesis PDF
 validation/         BMU–SUST qRT-PCR validation project (see validation/README.md)
 archive/            Early test runs, kept for reference
 ```

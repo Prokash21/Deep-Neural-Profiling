@@ -25,7 +25,7 @@ data/
 *.docx
 *.jpg
 
-# But keep these two
+# But keep these
 !validation/IRB_MOU/IRB_Application_FORM_17_08_2025.png
 !validation/design/*.png
 
@@ -63,3 +63,9 @@ manuscript/deep_neural_profiling_undergrad_thesis.pdf
 figures/poster.png
 deepprofile/illustrator_figures/poster/
 deepprofile/illustrator_figures/Step_2_VAE/
+
+# Manuscript folders: only the PDFs are published
+manuscript/*
+!manuscript/deep_neural_profiling_undergrad_thesis_project.pdf
+zenodo_manuscript/*
+!zenodo_manuscript/manuscript.pdf
